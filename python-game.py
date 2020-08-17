@@ -6,11 +6,14 @@ os.system('clear')
 pygame.mixer.music.play(-1)
 print(Fore.GREEN)
 
+#set up variables to determine world state.
 hasBadge = False
 plan = False
 identity = 'stranger'
 
+#prompt to continue, stored in a variable to permit easy changing.
 continuedialog = '    *ENTER>'
+
 
 def promptForActions(choice1, choice2):
 	while True:
@@ -24,11 +27,13 @@ def promptForActions(choice1, choice2):
 		else:
 			print('Try Again.')
 
+#simple list output function, that's all.
 def printList(list):
 	for i in range(len(list)):
 		print(list[i])
 
 
+#ha ha funny text art
 print('          _______      __      __       _______      _____________      _______      ___          __ ')
 print('         |   ___  \   |  |    |  |    /   ___   \   |             |   /   ___   \   |   |        /  |')
 print('         |  |   |  |  |  |____|  |   |  /     \  |  |____     ____|  |  /     \  |  |   |      /    |')
@@ -46,6 +51,8 @@ print('                                           *PRESS ENTER TO PLAY*         
 input('                                              [***********]                                          ')
 
 os.system('clear')
+
+#init text color
 print(Fore.RED)
 
 textlines = []
