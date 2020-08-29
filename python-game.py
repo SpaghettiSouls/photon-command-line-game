@@ -1,8 +1,11 @@
 if input('Enable music? [\'y\' for yes]') == 'y':
-	music_disabled = False
-else:
 	music_disabled = True
-
+else:
+	music_disabled = False
+#OH NO! I NAMED 'music_disabled' wrong!
+#The variable is true if the music is enabled. Whoops
+	
+	
 import pygame, os, time, random
 from colorama import Fore, Back
 if music_disabled:
