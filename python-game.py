@@ -1,9 +1,17 @@
+if input('Enable music? [\'y\' for yes]') == 'y':
+	music_disabled = False
+else:
+	music_disabled = True
+
 import pygame, os, time, random
 from colorama import Fore, Back
-pygame.init()
-pygame.mixer.music.load('Music/Cloudy.mp3')
-os.system('clear')
-pygame.mixer.music.play(-1)
+if music_disabled:
+	pygame.init()
+	pygame.mixer.music.load('Music/Cloudy.mp3')
+	os.system('clear')
+	pygame.mixer.music.play(-1)
+else:
+	os.system('clear')
 print(Fore.GREEN)
 
 #set up variables to determine world state.
@@ -168,9 +176,10 @@ def finishMsg(actname):
 finishMsg('ACT ONE:     HACKING AND ENTERING')
 time.sleep(2)
 input(continuedialog)
-pygame.mixer.music.stop()
-pygame.mixer.music.load('Music/Peace.mp3')
-pygame.mixer.music.play(-1)
+if music_disabled:
+	pygame.mixer.music.stop()
+	pygame.mixer.music.load('Music/Peace.mp3')
+	pygame.mixer.music.play(-1)
 
 os.system('clear')
 textlines.append('\n\n\n')
