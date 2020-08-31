@@ -245,7 +245,7 @@ if promptForActions('yes', 'no'):
 		hasBadge = True
 	else:
 		textlines.append('   and she types into a small laptop on her desk. Her eyes widen and she looks at you and calls   ')
-		textlines.append('   the police right in front of you. Oh, well.                                                    ')
+		textlines.append('   the corporate headquarters right in front of you. Oh, well.                                    ')
 		printList(textlines)
 		identity = 'stranger'
 else:
